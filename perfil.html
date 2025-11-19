@@ -1,0 +1,27 @@
+html>DOCTYPE
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Meu Perfil</h2>
+        <p><strong>Nome:</strong> <span id="nomePerfil"></span></p>
+        <p><strong>Email:</strong> <span id="emailPerfil"></span></p>
+
+        <button onclick="voltar()">Sair</button>
+    </div>
+
+    <script>
+        // Carrega dados salvos
+        document.getElementById("nomePerfil").textContent = localStorage.getItem("nome");
+        document.getElementById("emailPerfil").textContent = localStorage.getItem("email");
+
+        function voltar() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
